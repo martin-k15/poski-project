@@ -1,0 +1,59 @@
+@mixin imageSetup {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 2px 24px #00000029;
+    filter: brightness(90%);
+
+    &:hover {
+        filter: brightness(90%) opacity(0.9);
+        transition: 0.3s ease-in-out;
+    }
+}
+
+@mixin labelSetup {
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    font-weight: bold;
+    width: fit-content;
+    top: 36px;
+    font-size: small;
+    padding: 0 1.3em;
+    left: 24px;
+}
+
+@mixin headerIconSetup{
+    width: $header-icon-width;
+    height: $header-icon-height;
+    background-color: white;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    align-self: center;
+
+    &:hover {
+        @include iconAnimation;
+        animation: 0.3s fadein;
+        background-color: $label-color-travel;
+    }
+}
+@mixin iconAnimation {
+    @keyframes fadein {
+        from {
+            background-color: white;
+        }
+    
+        to {
+            background-color: $label-color-travel;
+    
+        }
+    }
+        
+}
+
+@mixin flexColumnDirection {
+    display: flex;
+    flex-direction: column;
+}
+

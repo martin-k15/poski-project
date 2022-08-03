@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Testovací úloha - Martin Kostka</title>
+
+    <link rel="preload" href="./dist/style.css" as="style">
+    <link rel="preload" href="./script.js" as="script">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <meta name="author" content="Martin Kostka">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Na projektu jsem pracoval v průběhu 2 dní dohromady lehce přes 8 hodin včetně nějaké optimalizace kódu. 
+    Stránka by měla být responzivní (přes developer tools je akorát problém s náhledem u Galaxy Fold). 
+    Pomocí JS jsem poté do konzole vytiskl některé informace ze zadání (např. počet příspěvků nebo součet delék nadpisů).
+    ">
+
+    <link rel="stylesheet" href="./dist/style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <header class="header block">
+        <a href='#' class="header__item--hamburger" aria-label="menu"></a>
+        <span class="header__item"></span>
+        <a href='#' class="header__item--search" aria-label="search"></a>
+    </header>
+
+
+    <main class="main-content">
+        <aside class="aside">
+            <a href="#" class="aside__href--fb" aria-label="Facebook"></a>
+            <a href="#" class="aside__href--twitter" aria-label="Twitter"></a>
+            <a href="#" class="aside__href--insta" aria-label="Instagram"></a>
+            <a href="#" class="aside__href--share" aria-label="share"></a>
+        </aside>
+
+
+        <div class="content block">
+            <article class="content__item content__item--1" id="article-1">
+                <span class="content__item--section-travel">travel</span>
+                <div class="content__item--text">
+                    <h4 class="content__item--text-header">Etiam quis quam. Nemo enim ipsam voluptatem quia.</h4>
+                    <span class="content__item--text-desc"><time datetime="2048-05-25">May 25, 2048</time> / 9
+                        min.</span>
+                </div>
+            </article>
+
+            <article class="content__item content__item--2" id="article-2">
+                <span class="content__item--section-travel">travel</span>
+                <div class="content__item--text">
+                    <h4 class="content__item--text-header">Etiam quis quam. Nemo enim ipsam voluptatem quia.</h4>
+                    <span class="content__item--text-desc"><time datetime="2048-05-25">January 10, 2048</time> / 4
+                        min.</span>
+                </div>
+            </article>
+
+
+            <article class="content__item content__item--3" id="article-3">
+                <span class="content__item--section-tech">tech</span>
+                <div class="content__item--text">
+                    <h4 class="content__item--text-header">Etiam quis quam. Nemo enim ipsam voluptatem quia.</h4>
+                    <span class="content__item--text-desc"><time datetime="2048-05-25">October 20, 2047</time> / 5
+                        min.</span>
+                </div>
+            </article>
+
+
+            <article class="content__item content__item--4" id="article-4">
+                <span class="content__item--section-travel">travel</span>
+                <div class="content__item--text">
+                    <h4 class="content__item--text-header">Etiam quis quam. Nemo enim ipsam voluptatem quia.</h4>
+                    <span class="content__item--text-desc"><time datetime="2048-05-25">August 20, 2047</time> / 8
+                        min.</span>
+                </div>
+            </article>
+
+
+            <article class="content__item content__item--special" id="article-special">
+                <span class="content__img--space-station"></span>
+                <h4 class="content__item--header content__item--header-special">Discover content from different
+                    universe</h4>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__div block">
+            <span>All rights reserved. &#169;</span>
+            <span class="footer_logo"></span>
+        </div>
+    </footer>
+</body>
+
+</html>
