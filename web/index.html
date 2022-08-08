@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Testovací úloha - Martin Kostka</title>
+    <title>The Blog</title>
 
     <link rel="preload" href="./dist/style.css" as="style">
     <link rel="preload" href="./script.js" as="script">
@@ -21,15 +21,25 @@
     ">
 
     <link rel="stylesheet" href="./dist/style.css">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
     <header class="header block">
-        <a href='#' class="header__item--hamburger" aria-label="menu"></a>
+        <a href='#' onclick="showMenu()" class="header__item--hamburger" aria-label="menu">
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </a>
         <span class="header__item"></span>
         <a href='#' class="header__item--search" aria-label="search"></a>
     </header>
+
+    <ul class="box-hamburger" id="box-hamburger">
+        <li class="box-hamburger__item">Home</li>
+        <li class="box-hamburger__item">Articles</li>
+        <li class="box-hamburger__item">Contact us</li>
+    </ul>
 
 
     <main class="main-content">
@@ -39,7 +49,6 @@
             <a href="#" class="aside__href--insta" aria-label="Instagram"></a>
             <a href="#" class="aside__href--share" aria-label="share"></a>
         </aside>
-
 
         <div class="content block">
             <article class="content__item content__item--1" id="article-1">

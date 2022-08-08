@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "hamburger";
 
 * {
     margin: 0;
@@ -7,7 +8,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     height: 100vh;
 }
 
@@ -41,8 +42,9 @@ body {
     }
 
     .header__item--hamburger {
-        mask-image: url(./../../_src/bars-solid.svg);
-        @include headerIconSetup;
+        //mask-image: url(./../../_src/bars-solid.svg);
+        //@include headerIconSetup;
+        align-self: center;
 
     }
 
@@ -64,6 +66,7 @@ body {
     margin: 2em;
     gap: 1em;
 }
+
 
 .content {
     display: grid;
@@ -229,7 +232,7 @@ body {
     mask-repeat: no-repeat;
     mask-position: center;
 
-    &:hover{
+    &:hover {
         background-color: rgba(255, 255, 255, 1);
         transition: 0.3s ease-in-out;
     }
@@ -283,9 +286,7 @@ small: 	       559px  -  360px
 
 }
 
-@media screen and (max-width: 1200px) {
-
-}
+@media screen and (max-width: 1200px) {}
 
 
 /* large device */
@@ -326,6 +327,10 @@ small: 	       559px  -  360px
 
     .footer__div {
         flex-direction: column;
+    }
+
+    .box-hamburger {
+        width: 100%;
     }
 
 }

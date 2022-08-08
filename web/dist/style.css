@@ -1,5 +1,108 @@
 /* COLORS */
 /* SIZES */
+/* for HAMBURGER MENU */
+/* Hamburger Menu */
+.box-hamburger {
+  display: none;
+  color: white;
+  font-size: large;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 5em;
+  padding: 1em 2em;
+  width: 15em;
+  bottom: 0;
+  border-radius: 15px;
+}
+
+.box-hamburger__item {
+  list-style: none;
+  margin: 0 auto;
+  padding: 1em 0;
+  cursor: pointer;
+}
+
+.menu-btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger {
+  position: absolute;
+  width: 2em;
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 2em;
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  -webkit-transform: rotate(45deg) translate(35px, -35px);
+          transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  -webkit-transform: rotate(-45deg) translate(35px, 35px);
+          transform: rotate(-45deg) translate(35px, 35px);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -43,42 +146,9 @@ body {
 }
 
 .header .header__item--hamburger {
-  -webkit-mask-image: url(./../../_src/bars-solid.svg);
-          mask-image: url(./../../_src/bars-solid.svg);
-  width: 2em;
-  height: 2em;
-  background-color: white;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-          mask-position: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-.header .header__item--hamburger:hover {
-  -webkit-animation: 0.3s fadein;
-          animation: 0.3s fadein;
-  background-color: #84FAB0;
-}
-
-@-webkit-keyframes fadein {
-  from {
-    background-color: white;
-  }
-  to {
-    background-color: #84FAB0;
-  }
-}
-
-@keyframes fadein {
-  from {
-    background-color: white;
-  }
-  to {
-    background-color: #84FAB0;
-  }
 }
 
 .header .header__item--hamburger,
@@ -105,6 +175,15 @@ body {
   -webkit-animation: 0.3s fadein;
           animation: 0.3s fadein;
   background-color: #84FAB0;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: #84FAB0;
+  }
 }
 
 @keyframes fadein {
@@ -543,6 +622,9 @@ small: 	       559px  -  360px
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .box-hamburger {
+    width: 100%;
+  }
 }
 
 /* small device */
@@ -570,4 +652,3 @@ small: 	       559px  -  360px
     width: fit-content;
   }
 }
-/*# sourceMappingURL=style.css.map */
